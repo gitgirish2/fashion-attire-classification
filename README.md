@@ -43,24 +43,24 @@ Use `utils/mnist_reader` from this repo:
 ```python
 import mnist_reader
 
-X_train, y_train = mnist_reader.load_mnist("__data__/fashion", kind="train")
-X_test, y_test = mnist_reader.load_mnist("__data__/fashion", kind="t10k")
+X_train, y_train = mnist_reader.load_mnist("data/fashion", kind="train")
+X_test, y_test = mnist_reader.load_mnist("data/fashion", kind="t10k")
 ```
 
 ### Loading data with Tensorflow
-Make sure you have downloaded the data and placed it in `__data__/fashion`. Otherwise, *Tensorflow will download and use the original MNIST.*
+Make sure you have downloaded the data and placed it in `data/fashion`. Otherwise, *Tensorflow will download and use the original MNIST.*
 
 ```python
 from tensorflow.examples.tutorials.mnist import input_data
 
-data = input_data.read_data_sets("__data__/fashion")
+data = input_data.read_data_sets("data/fashion")
 
 data.train.next_batch(BATCH_SIZE)
 ```
 
 Note, Tensorflow supports passing in a source url to the `read_data_sets`. You may use: 
 ```python
-data = input_data.read_data_sets("__data__/fashion", source_url="http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/")
+data = input_data.read_data_sets("data/fashion", source_url="http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/")
 ```
 
 
