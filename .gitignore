@@ -102,3 +102,18 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Ignore vscode project files
+.vscode
+
+# Ignore OS files
+.DS_Store
+
+# Ignore data files
+*.tsv
+*.csv
+*.gz
+*.mov
+
+# Ignore log fils
+log/
