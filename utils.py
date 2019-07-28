@@ -44,7 +44,6 @@ def create_sprite_image(images):
                 j * img_w:(j + 1) * img_w] = this_img
     return spriteimage
 
-
 def vector_to_matrix_mnist(mnist_digits):
     """Reshapes normal mnist digit (batch,28*28) to matrix (batch,28,28)"""
     return np.reshape(mnist_digits, (-1, 28, 28))
