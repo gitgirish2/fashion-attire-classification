@@ -9,7 +9,7 @@ import os
 import gzip
 import numpy as np
 
-def load_mnist(path="__data__", kind="train"):
+def load_mnist(path="data", kind="train"):
     """Load MNIST data from `path`"""
     labels_path = os.path.join(path, "{}-labels-idx1-ubyte.gz".format(kind))
     images_path = os.path.join(path, "{}-images-idx3-ubyte.gz".format(kind))
