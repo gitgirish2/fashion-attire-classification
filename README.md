@@ -35,35 +35,6 @@ Each training and test example is assigned to one of the following labels:
 | 9 | Ankle boot |
 
 
-## Usage
-
-### Loading data with Python (requires [NumPy](http://www.numpy.org/))
-
-Use `utils/mnist_reader` from this repo:
-```python
-import mnist_reader
-
-X_train, y_train = mnist_reader.load_mnist("data/fashion", kind="train")
-X_test, y_test = mnist_reader.load_mnist("data/fashion", kind="t10k")
-```
-
-### Loading data with Tensorflow
-Make sure you have downloaded the data and placed it in `data/fashion`. Otherwise, *Tensorflow will download and use the original MNIST.*
-
-```python
-from tensorflow.examples.tutorials.mnist import input_data
-
-data = input_data.read_data_sets("data/fashion")
-
-data.train.next_batch(BATCH_SIZE)
-```
-
-Note, Tensorflow supports passing in a source url to the `read_data_sets`. You may use: 
-```python
-data = input_data.read_data_sets("data/fashion", source_url="http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/")
-```
-
-
 ### Other Explorations of Fashion-MNIST
 + [Fashion-MNIST: Year in Review](https://hanxiao.github.io/2018/09/28/Fashion-MNIST-Year-In-Review/)
 + [Fashion-MNIST on Google Scholar](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=fashion-mnist&btnG=&oq=fas) 
